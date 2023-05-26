@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* 포폴 공통서식 */
+.person-portfolio{
+  display: grid;
+  height: 582px;
+  margin-top: 80px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.portfolio_link{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color02);
+  z-index: 10;
+  overflow: hidden;
+}
+.portfolio-program{
+  position: absolute;
+  top:20px;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translateX(-50%);
+}
+.portfolio-info_wrap{
+  position: absolute; bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  background: #6a8700;
+  box-sizing: border-box;
+}
+.portfolio-title{
+  color: var(--main-color01);
+  font-weight: 600;
+  font-size: 18px;
+}
+.portfolio-subtitle{
+  color: var(--main-color01);
+  font-weight: 300;
+  font-size: 14px;
+}
+.portfolio-thumb{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* 배경 및 종이접기 그리드 CSS */
+.person-portfolio_item:nth-last-of-type(even){
+  position: relative;
+  width: 100%;
+  height: 270px;
+  background: var(--main-color02);
+}
+
+.person-portfolio_item:nth-last-of-type(odd){
+  position: relative;
+  width: 100%;
+  height: 270px;
+  background: var(--main-color02);
+  transform: translatey(300px);
+}
+
+/* 홀수번째 */
+.person-portfolio_item:nth-last-of-type(even) .papper-white{
+  position: absolute;
+  top:-193px; left: -193px;
+  width: 180px;
+  height: 180px;
+  background: var(--main-color01);
+  z-index: 31;
+  transform: rotate(45deg);
+  transition: .55s;
+}
+.person-portfolio_item:nth-last-of-type(even) .papper-fold{
+  position: absolute; top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  background: var(--main-color03);
+  transform: translate(-120px, -120px);
+  z-index: 20;
+  transition: .6s;
+}
+.person-portfolio_item:nth-last-of-type(even):hover .papper-white{
+  top:-93px; left: -93px;
+}
+.person-portfolio_item:nth-last-of-type(even):hover .papper-fold{
+  top:0px; left: 0px;
+  transform: translate(0px, 0px);
+}
+.person-portfolio_item:nth-last-of-type(even):hover .papper-thumb{
+  width: 300px;
+  transform: translateX(270px);
+  filter: brightness(1);
+}
+.person-portfolio_item:nth-last-of-type(even) .papper-thumb{
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 300px;
+  height: 270px;
+  background: #d9d9d9;
+  transform: translateX(40px);
+  filter: brightness(.5);
+  z-index: 0;
+  transition: .6s;
+}
+
+
+
+
+/* 짝수번째 */
+.person-portfolio_item:nth-last-of-type(odd) .papper-white{
+  position: absolute;
+  top:-193px; right: -193px;
+  width: 180px;
+  height: 180px;
+  background: var(--main-color01);
+  z-index: 31;
+  transform: rotate(45deg);
+  transition: .55s;
+}
+.person-portfolio_item:nth-last-of-type(odd) .papper-fold{
+  position: absolute; top: 0px;
+  right: 0px;
+  width: 120px;
+  height: 120px;
+  background: var(--main-color03);
+  transform: translate(120px, -120px);
+  z-index: 20;
+  transition: .6s;
+}
+.person-portfolio_item:nth-last-of-type(odd):hover .papper-white{
+  top:-93px; right: -93px;
+}
+.person-portfolio_item:nth-last-of-type(odd):hover .papper-fold{
+  top:0px; right: 0px;
+  transform: translate(0px, 0px);
+}
+.person-portfolio_item:nth-last-of-type(odd):hover .papper-thumb{
+  width: 306px;
+  transform: translateX(-300px);
+  filter: brightness(1);
+}
+.person-portfolio_item:nth-last-of-type(odd) .papper-thumb{
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  width: 300px;
+  height: 270px;
+  background: #d9d9d9;
+  transform: translateX(-70px);
+  z-index: 0;
+  transition: .6s;
+  filter: brightness(.5);
+}
+

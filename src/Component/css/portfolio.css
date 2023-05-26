@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+/* Banner */
+.portfolio-intro{
+  position: relative;
+  width: 100vw;
+  height: calc(100vh + 80px);
+  transform: translateY(-80px);
+}
+.intro-main{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter : blur(10px);
+}
+.intro-btn-wrap{
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+}
+.portfolio-btn{
+  display: block;
+  width: 120px;
+  border: 1px solid var(--main-color02);
+  color: var(--main-color02);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.text-wrap{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+.intro-subtitle{
+  display: block;
+  width: 100%;
+  color: var(--main-color01);
+  line-height: 30px;
+}
+.intro-title{
+  display: block;
+  width: 100%;
+  margin: 20px 0px;
+  color: var(--main-color01);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+/* intro */
+.portfolio-info{
+  display: flex;
+  width: 100%;
+  height: 700px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+.portfolio-developer{
+  display: flex;
+  width: 100%;
+  height: 700px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* design. library */
+.design-wrap{
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+.design-img_wrap{
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+.design-img_wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top:0; left: 0;
+}
+.design-item{
+  position: absolute;
+  top: 20px; left: 0;
+  width: calc(100% - 80px);
+  height: 100%;
+  opacity: 0;
+  transition: .6s;
+  text-align: justify;
+}
+.design-item.active{
+  transition-delay: .2s;
+  opacity: 1;
+}
+.design-image{
+  opacity: 1;
+  transition: 1.2s;
+}
+.design-image.disabled{
+  opacity: 0;
+}
+
+/* dev */
+.portfolio-developer-item{
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+.portfolio-item-wrap{
+  width: 100%;
+  position: relative;
+}
+
+.dev-chapter{
+  display: flex;
+  width: 50%;
+  height: 32px;
+  justify-content: left;
+  gap: 32px;
+}
+.dev-chapter-btn{
+  display: block;
+  width: 100px;
+  height: 100%;
+  line-height: 32px;
+  text-align: center;
+}
+.dev-chapter-btn.active{
+  position: relative;
+  font-weight: 800;
+}
+.dev-chapter-btn.active::after{
+  display: inline-block;
+  position: absolute;
+  bottom: 0; left: 10px;
+  width: 80%;
+  height: 4px;
+  background: var(--main-color02);
+  content: '';
+  margin-top: 4px;
+}
+.portfolio-mainimg01{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.portfolio-item{
+  display: flex;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  gap: 32px;
+  opacity: 0;
+  user-select: none;
+  transition: .6s;
+  z-index: 1;
+}
+.portfolio-item.active{
+  user-select: auto;
+  transition-delay: .2s;
+  opacity: 1;
+  z-index: 20;
+}
+
+.portfolio-code{
+  display: block;
+  width: 100%;
+  height: 550px;
+  padding: 16px;
+  background: #272727;
+  color: var(--main-color02);
+  font-size: 14px;
+  line-height: 19px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.portfolio-code::-webkit-scrollbar {
+  width: 20px;
+}
+.portfolio-code::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.portfolio-code::-webkit-scrollbar-thumb {
+  background: var(--main-color02);
+}
+.portfolio-item-title{
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.portfolio-text{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+  overflow: auto;
+  word-break: break-all;
+}
+
+.portfolio-title-text{
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.portfolio-tolist{
+  display: block;
+  width: 100px;
+  line-height: 40px;
+  bottom: 0;
+  left: 50%; transform: translateX(-50%);
+  position: absolute;
+  background: none;
+  border : 1px solid var(--main-color03);
+  color: var(--main-color03);
+  font-size: 16px;
+  font-weight: 600;
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.main-comp.contact.ready{
+  opacity: 0;
+}
+.main-comp.contact{
+  opacity: 1;
+  transition: 1.8s;
+}
+
+#contact{
+  position: relative;
+  height: 100%;
+}
+.main-contact{
+  position: absolute;
+  bottom: 40px;
+  width: 110%;
+  transform: translateX(-200px);
+}
+.contact-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.contact-info{
+  margin-bottom: 50px;
+}
+.main-contact-subtitle{
+  right: 100px;
+  top: 0px;
+  font-size: 18px;
+  font-weight: 200;
+}
+.main-contact-subtitle2{
+  right: 100px;
+  top: 100px;
+  font-size: 18px;
+  font-weight: 200;
+}
+.main-contact-title{
+  right: 100px;
+  top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.contact-info-wrap{
+  margin-top: 150px;
+  position: relative;
+  z-index: 101;
+}
+.contact-profile{
+  height: 100%;
+  position: absolute;
+  right:0px;
+  z-index: 0;
+}
+.contact-bg{
+  display: block;
+  width: 100vw; height: 1320px;
+  background: var(--main-color02);
+  transform: translateY(1180px);
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+.thanks-for-watching{
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 32px;
+}
+
+.contact-info.list03{
+  margin-top: 125px;
+}
+.main-contact-notice{
+  color: #fff;
+  line-height: 32px;
+}
