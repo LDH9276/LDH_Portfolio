@@ -31,19 +31,21 @@ function About( {activeSlide} ) {
         </h2>
         <div className="about-wrap">
           <div className="about-title-wrap">
-            <h2 className='about-title'>프론트엔드 개발자 <br/>이동헌입니다.</h2>
-            <div className="about-text-wrap">
-              <p className='about-text-info'>
-                웹 퍼블리셔를 넘어 <br />
-                프론트엔드 영역까지 열심히 달려왔습니다. <br />
-                이제 프론트엔드에서의 더 큰 영역에서 <br />
-                뛰어들 준비가 끝났습니다.
-              </p>
-              <ul className='about-text-career'>
-                <li><span>2016 - 2020</span>책나무출판사 (북다지이너)</li>
-                <li><span>2020 - 2022</span>케이패밀리코퍼레이션 (영상디자이너)</li>
-                <li><span>LICENSE</span>웹디자인기능사</li>
-              </ul>
+            <div className="about-informantion">
+              <h2 className='about-title'>프론트엔드 개발자 <br/>이동헌입니다.</h2>
+              <div className="about-text-wrap">
+                <p className='about-text-info'>
+                  웹 퍼블리셔를 넘어 <br />
+                  프론트엔드 영역까지 열심히 달려왔습니다. <br />
+                  이제 프론트엔드에서의 더 큰 영역에서 <br />
+                  뛰어들 준비가 끝났습니다.
+                </p>
+                <ul className='about-text-career'>
+                  <li><span>2016 - 2020</span>책나무출판사 (북다지이너)</li>
+                  <li><span>2020 - 2022</span>케이패밀리코퍼레이션 (영상디자이너)</li>
+                  <li><span>LICENSE</span>웹디자인기능사</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="about-box-wrap">

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, BrowserRouter, Routes } from 'r
 import Index from './Route/Index';
 import Header from './Header/Header';
 import Portfolio from './Component/Portfolio.jsx';
+import NotFound from './Route/NotFound';
 
 function App(props) {
   const [ p_slide, setP_slide ] = useState(0);
@@ -43,6 +44,7 @@ function App(props) {
           <Route path="/portfolio/:id" element={<Portfolio isStart={isStart} setActiveSlide={setActiveSlide} activeSlide={activeSlide}
           p_slide={p_slide} setP_slide={setP_slide} reset={reset}
           />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>        
       </BrowserRouter>
     </>

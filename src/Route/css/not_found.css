@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.found_video{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.not_found{
+  width: 1170px;
+  height: 100vh;
+  margin: 80px auto;
+  position: relative;
+}
+
+.not_found h2{
+  display: block;
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-color03);
+  position: absolute;
+  width: 100%;
+  top: 200px;
+  z-index: 100;
+}
