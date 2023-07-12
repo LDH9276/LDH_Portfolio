@@ -8,8 +8,6 @@ import NotFound from './Route/NotFound';
 
 function App(props) {
   const [ p_slide, setP_slide ] = useState(0);
-
-
   const [showIntro, setShowIntro] = useState(true);
   const [isStart, setIsStart] = useState('ready');
   const [activeSlide, setActiveSlide] = useState(0);
@@ -18,7 +16,7 @@ function App(props) {
     const timeoutId = setTimeout(() => {
       setShowIntro(false);
       setIsStart('');
-    }, 7500);
+    }, 0);
 
     return () => {
       clearTimeout(timeoutId);
@@ -32,11 +30,6 @@ function App(props) {
 
   return (
     <>
-      {showIntro && (
-        <div className="intro-video-overlay">
-          <video src={`${process.env.PUBLIC_URL}/videos/intro.mp4`} className='intro' autoPlay muted loop controls={false} />
-        </div>
-      )}
       <BrowserRouter>
         <Header isStart={isStart} setActiveSlide={setActiveSlide} reset={reset}/>
         <Routes>

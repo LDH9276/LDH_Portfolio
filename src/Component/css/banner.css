@@ -10,9 +10,10 @@
 .main-banner{
   position: absolute;
   bottom: 40px;
-  width: 95%;
+  width: 92%;
   left: 0;
-  transform: translateX(-80px);
+  transform: translateX(-50px);
+  z-index: 0;
 }
 .banner-wrap{
   position: absolute;
@@ -28,6 +29,7 @@
   top: 0px;
   font-size: 18px;
   font-weight: 200;
+  z-index: 20;
 }
 .main-banner-subtitle2{
   position: absolute;
@@ -35,6 +37,7 @@
   top: 100px;
   font-size: 18px;
   font-weight: 200;
+  z-index: 15;
 }
 .main-banner-title{
   position: absolute;
