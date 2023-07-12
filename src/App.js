@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, BrowserRouter, Routes } from 'react-router-dom';
 import Index from './Route/Index';
@@ -16,7 +16,7 @@ function App(props) {
     const timeoutId = setTimeout(() => {
       setShowIntro(false);
       setIsStart('');
-    }, 0);
+    }, []);
 
     return () => {
       clearTimeout(timeoutId);

@@ -3,9 +3,9 @@ import './css/scrolls.css';
 
 function Scroll(props) {
   return (
-      <div class="scroll-downs">
-        <div class="mousey">
-          <div class="scroller"></div>
+      <div className="scroll-downs">
+        <div className="mousey">
+          <div className="scroller"></div>
         </div>
         <p className='scroll-text'>scroll</p>
       </div>  

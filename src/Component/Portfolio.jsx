@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import { Mousewheel } from "swiper";
 import PortPesronPos from '../Header/PortPersonPos';
 import PortTeamPos from '../Header/PortTeamPos';
+import ScrollPf from '../Header/ScrollPf';
 
 function Portfolio( {p_slide, setP_slide, isStart, setActiveSlide} ) {
   const portfolioSwiperRef = useRef(null);
@@ -93,6 +94,7 @@ function Portfolio( {p_slide, setP_slide, isStart, setActiveSlide} ) {
               <a href={portfolioItem.homepage} title="포트폴리오 페이지 가기" className='portfolio-btn'  target="_blank" rel="noopener noreferrer">페이지 이동</a>
             </p>
           </div>
+          <ScrollPf />
         </div>
       </SwiperSlide>
       <SwiperSlide>
