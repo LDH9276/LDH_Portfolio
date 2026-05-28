@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 function Pos( {handleSlideNavigation, activeSlide} ) {
 
-  const Position = window.scrollY;
+
   for(let i = 0; i < 5; i++) {
     if (activeSlide === i) {
       var navBtn = ['', '', '', '', ''];
