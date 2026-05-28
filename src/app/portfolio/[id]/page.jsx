@@ -102,25 +102,27 @@ export default function Portfolio() {
 
       {/* Introduce Slide */}
       <SwiperSlide>
-        <div className={`absolute w-full h-[790px] top-1/2 -translate-y-1/2 transition-all duration-[1500ms]`}>
-          <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
-          <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
-          <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
-            <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
-              {portfolioItem.name}
-            </p>
-            <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
-              Introduce
-            </h2>
-            <div className="flex justify-between items-center px-12 mt-16 gap-12">
-              <div className="w-1/2 relative rounded-2xl overflow-hidden shadow-2xl border border-white/30 dark:border-slate-700/50">
-                <img src={`/images/${portfolioItem.textimg01}`} alt={portfolioItem.name + '01'} className='w-full object-cover hover:scale-105 transition-transform duration-700'/>
-              </div>
-              <div className="w-1/2">
-                <p className='text-2xl font-bold text-primary dark:text-primary-light mb-6'>{portfolioItem.Headtitle}</p>
-                <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
-                {portfolioItem.text01}
-                </pre>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-[790px] transition-all duration-[1500ms]">
+            <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
+            <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
+            <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
+              <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
+                {portfolioItem.name}
+              </p>
+              <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
+                Introduce
+              </h2>
+              <div className="flex justify-between items-center px-12 mt-16 gap-12">
+                <div className="w-1/2 relative rounded-2xl overflow-hidden shadow-2xl border border-white/30 dark:border-slate-700/50">
+                  <img src={`/images/${portfolioItem.textimg01}`} alt={portfolioItem.name + '01'} className='w-full object-cover hover:scale-105 transition-transform duration-700'/>
+                </div>
+                <div className="w-1/2">
+                  <p className='text-2xl font-bold text-primary dark:text-primary-light mb-6'>{portfolioItem.Headtitle}</p>
+                  <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
+                  {portfolioItem.text01}
+                  </pre>
+                </div>
               </div>
             </div>
           </div>
@@ -129,52 +131,54 @@ export default function Portfolio() {
 
       {/* Environment & Design Slide */}
       <SwiperSlide>
-        <div className={`absolute w-full h-[790px] top-1/2 -translate-y-1/2 transition-all duration-[1500ms]`}>
-          <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
-          <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
-          <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
-            <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
-              {portfolioItem.name}
-            </p>
-            <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
-              개발환경 및 디자인
-            </h2>
-            <div className="flex justify-between items-start px-12 mt-20 gap-12 h-[500px]">
-
-              <div className="w-1/2 flex flex-col h-full">
-                <ul className='flex gap-4 border-b border-gray-300 dark:border-slate-700 mb-8'>
-                  <li className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab01 === 0 ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange01(0)}>UI / UX</li>
-                  <li className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab01 === 1 ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange01(1)}>Library</li>
-                </ul>
-                <div className="relative flex-1 overflow-y-auto pr-4 custom-scrollbar">
-                  <div className={`absolute top-0 left-0 w-full transition-opacity duration-500 ${tab01 === 0 ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute'}`}>
-                    <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
-                      {portfolioItem.design}
-                    </pre>
-                  </div>
-                  <div className={`absolute top-0 left-0 w-full transition-opacity duration-500 ${tab01 === 1 ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute'}`}>
-                    <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
-                      {portfolioItem.text03}
-                    </pre>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-[790px] transition-all duration-[1500ms]">
+            <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
+            <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
+            <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
+              <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
+                {portfolioItem.name}
+              </p>
+              <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
+                개발환경 및 디자인
+              </h2>
+              <div className="flex justify-between items-start px-12 mt-20 gap-12 h-[500px]">
+  
+                <div className="w-1/2 flex flex-col h-full">
+                  <ul className='flex gap-4 border-b border-gray-300 dark:border-slate-700 mb-8'>
+                    <li className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab01 === 0 ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange01(0)}>UI / UX</li>
+                    <li className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab01 === 1 ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange01(1)}>Library</li>
+                  </ul>
+                  <div className="relative flex-1 overflow-y-auto pr-4 custom-scrollbar">
+                    <div className={`absolute top-0 left-0 w-full transition-opacity duration-500 ${tab01 === 0 ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute'}`}>
+                      <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
+                        {portfolioItem.design}
+                      </pre>
+                    </div>
+                    <div className={`absolute top-0 left-0 w-full transition-opacity duration-500 ${tab01 === 1 ? 'opacity-100 z-10 relative' : 'opacity-0 z-0 absolute'}`}>
+                      <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
+                        {portfolioItem.text03}
+                      </pre>
+                    </div>
                   </div>
                 </div>
+  
+                {/* ID별 예외처리 - Images */}
+                <div className="w-1/2 h-full relative rounded-2xl overflow-hidden shadow-xl border border-white/30 dark:border-slate-700/50 bg-white/20 dark:bg-slate-800/30">
+                  {['1', '4', '2', '7'].includes(id) && (
+                    <>
+                      <img src={`/images/${portfolioItem.textimg02}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 0 ? 'opacity-100' : 'opacity-0'}`}/>
+                      <img src={`/images/${portfolioItem.textimg03}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 1 ? 'opacity-100' : 'opacity-0'}`}/>
+                      <img src={`/images/${portfolioItem.textimg04}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 2 ? 'opacity-100' : 'opacity-0'}`}/>
+                    </>
+                  )}
+  
+                  {['3', '6', '5', '8'].includes(id) && (
+                    <img src={`/images/${portfolioItem.textimg02}`} alt="" className='absolute inset-0 w-full h-full object-contain'/>
+                  )}
+                </div>
+  
               </div>
-
-              {/* ID별 예외처리 - Images */}
-              <div className="w-1/2 h-full relative rounded-2xl overflow-hidden shadow-xl border border-white/30 dark:border-slate-700/50 bg-white/20 dark:bg-slate-800/30">
-                {['1', '4', '2', '7'].includes(id) && (
-                  <>
-                    <img src={`/images/${portfolioItem.textimg02}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 0 ? 'opacity-100' : 'opacity-0'}`}/>
-                    <img src={`/images/${portfolioItem.textimg03}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 1 ? 'opacity-100' : 'opacity-0'}`}/>
-                    <img src={`/images/${portfolioItem.textimg04}`} alt="" className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${img === 2 ? 'opacity-100' : 'opacity-0'}`}/>
-                  </>
-                )}
-
-                {['3', '6', '5', '8'].includes(id) && (
-                  <img src={`/images/${portfolioItem.textimg02}`} alt="" className='absolute inset-0 w-full h-full object-contain'/>
-                )}
-              </div>
-
             </div>
           </div>
         </div>
@@ -182,45 +186,47 @@ export default function Portfolio() {
 
       {/* Develop Slide */}
       <SwiperSlide>
-        <div className={`absolute w-full h-[790px] top-1/2 -translate-y-1/2 transition-all duration-[1500ms]`}>
-          <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
-          <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
-          <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
-            <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
-              {portfolioItem.name}
-            </p>
-            <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
-              Develop
-            </h2>
-            
-            <div className="flex flex-col px-12 mt-20 h-[500px]">
-              <ul className='flex gap-4 border-b border-gray-300 dark:border-slate-700 mb-8'>
-                {[0, 1, 2, 3].map((num) => (
-                  <li key={num} className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab === num ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange(num)}>Chapter 0{num + 1}</li>
-                ))}
-              </ul>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-[790px] transition-all duration-[1500ms]">
+            <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
+            <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
+            <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
+              <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
+                {portfolioItem.name}
+              </p>
+              <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
+                Develop
+              </h2>
               
-              <div className="relative flex-1 overflow-hidden">
-                {[
-                  { code: portfolioItem.code1, title: portfolioItem.title01, text: portfolioItem.text02_1 },
-                  { code: portfolioItem.code2, title: portfolioItem.title02, text: portfolioItem.text02_2 },
-                  { code: portfolioItem.code3, title: portfolioItem.title03, text: portfolioItem.text02_3 },
-                  { code: portfolioItem.code4, title: portfolioItem.title04, text: portfolioItem.text02_4 }
-                ].map((content, idx) => (
-                  <div key={idx} className={`absolute inset-0 flex gap-12 transition-opacity duration-500 ${tab === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
-                    <div className="w-1/2 h-full rounded-2xl overflow-auto bg-slate-900 p-6 shadow-inner custom-scrollbar border border-slate-700">
-                      <pre className='text-sm text-green-400 font-mono leading-relaxed whitespace-pre-wrap'>
-                        {content.code}
-                      </pre>
+              <div className="flex flex-col px-12 mt-20 h-[500px]">
+                <ul className='flex gap-4 border-b border-gray-300 dark:border-slate-700 mb-8'>
+                  {[0, 1, 2, 3].map((num) => (
+                    <li key={num} className={`pb-4 px-4 text-xl font-bold cursor-pointer transition-colors ${tab === num ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'}`} onClick={() => tabChange(num)}>Chapter 0{num + 1}</li>
+                  ))}
+                </ul>
+                
+                <div className="relative flex-1 overflow-hidden">
+                  {[
+                    { code: portfolioItem.code1, title: portfolioItem.title01, text: portfolioItem.text02_1 },
+                    { code: portfolioItem.code2, title: portfolioItem.title02, text: portfolioItem.text02_2 },
+                    { code: portfolioItem.code3, title: portfolioItem.title03, text: portfolioItem.text02_3 },
+                    { code: portfolioItem.code4, title: portfolioItem.title04, text: portfolioItem.text02_4 }
+                  ].map((content, idx) => (
+                    <div key={idx} className={`absolute inset-0 flex gap-12 transition-opacity duration-500 ${tab === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
+                      <div className="w-1/2 h-full rounded-2xl overflow-auto bg-slate-900 p-6 shadow-inner custom-scrollbar border border-slate-700">
+                        <pre className='text-sm text-green-400 font-mono leading-relaxed whitespace-pre-wrap'>
+                          {content.code}
+                        </pre>
+                      </div>
+                      <div className="w-1/2 h-full overflow-y-auto pr-4 custom-scrollbar">
+                        <p className='text-2xl font-bold text-primary dark:text-primary-light mb-6'>{content.title}</p>
+                        <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
+                          {content.text}
+                        </pre>
+                      </div>
                     </div>
-                    <div className="w-1/2 h-full overflow-y-auto pr-4 custom-scrollbar">
-                      <p className='text-2xl font-bold text-primary dark:text-primary-light mb-6'>{content.title}</p>
-                      <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
-                        {content.text}
-                      </pre>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -229,30 +235,32 @@ export default function Portfolio() {
 
       {/* Review Slide */}
       <SwiperSlide>
-        <div className={`absolute w-full h-[790px] top-1/2 -translate-y-1/2 transition-all duration-[1500ms]`}>
-          <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
-          <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
-          <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
-            <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
-              {portfolioItem.name}
-            </p>
-            <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
-              후기 및 느낀점
-            </h2>
-            
-            <div className="flex justify-between items-center px-12 mt-16 gap-12 h-[450px]">
-              <div className="w-1/2 h-full overflow-y-auto pr-4 custom-scrollbar">
-                <p className='text-3xl font-bold text-primary dark:text-primary-light mb-8'>총평 및 후기</p>
-                <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
-                {portfolioItem.text04}
-                </pre>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-[790px] transition-all duration-[1500ms]">
+            <div className="absolute w-full h-[1px] bg-primary top-[25px] -z-10">&nbsp;</div>
+            <div className="absolute w-full h-[1px] bg-primary bottom-[25px] -z-10">&nbsp;</div>
+            <div className="w-[1170px] mx-auto px-6 h-full relative text-left bg-white/40 dark:bg-slate-900/40 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 dark:border-slate-800/50 flex flex-col justify-center">
+              <p className='absolute right-[100px] top-[15px] font-semibold text-primary uppercase tracking-widest z-20'>
+                {portfolioItem.name}
+              </p>
+              <h2 className='absolute right-[100px] top-[40px] text-5xl font-extrabold text-gray-900 dark:text-white'>
+                후기 및 느낀점
+              </h2>
+              
+              <div className="flex justify-between items-center px-12 mt-16 gap-12 h-[450px]">
+                <div className="w-1/2 h-full overflow-y-auto pr-4 custom-scrollbar">
+                  <p className='text-3xl font-bold text-primary dark:text-primary-light mb-8'>총평 및 후기</p>
+                  <pre className='whitespace-pre-wrap text-gray-700 dark:text-gray-300 font-light leading-relaxed text-lg'>
+                  {portfolioItem.text04}
+                  </pre>
+                </div>
+                <div className="w-1/2 h-full relative rounded-2xl overflow-hidden shadow-2xl border border-white/30 dark:border-slate-700/50">
+                  <img src={`/images/${portfolioItem.textimg01}`} alt={portfolioItem.name + '01'} className='w-full h-full object-cover'/>
+                </div>
               </div>
-              <div className="w-1/2 h-full relative rounded-2xl overflow-hidden shadow-2xl border border-white/30 dark:border-slate-700/50">
-                <img src={`/images/${portfolioItem.textimg01}`} alt={portfolioItem.name + '01'} className='w-full h-full object-cover'/>
-              </div>
+  
+              <button className='absolute bottom-10 left-1/2 -translate-x-1/2 px-10 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white font-bold transition-all shadow-lg hover:-translate-y-1' onClick={Number(id) < 5 ? toList : toList2}>목록으로 가기</button>
             </div>
-
-            <button className='absolute bottom-10 left-1/2 -translate-x-1/2 px-10 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white font-bold transition-all shadow-lg hover:-translate-y-1' onClick={Number(id) < 5 ? toList : toList2}>목록으로 가기</button>
           </div>
         </div>
       </SwiperSlide>
